@@ -1,3 +1,6 @@
+from typing import List
+
+
 def all_numbers_form_one_to_thousand_divisible_by_seven():
     original_list = list(range(1, 1001))
     return [number for number in original_list if number % 7 == 0]
@@ -12,3 +15,5 @@ def count_the_number_of_spaces_in_string(sentence: str) -> int:
     return len([space for space in sentence if space == " "])
 
 
+def list_all_consonants_in_sentence(sentence: str) -> List:
+    return list([letter for letter in sentence if letter not in "aeiouAEIOU "])
