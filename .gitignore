@@ -1,1 +1,3 @@
 list_comprehension_venv/
+.idea/
+__pycache__/
