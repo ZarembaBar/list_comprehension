@@ -8,5 +8,7 @@ def all_numbers_form_one_to_thousand_with_three_in_them():
     return [number for number in original_list if "3" in str(number)]
 
 
-if __name__ == "__main__":
-    print(all_numbers_form_one_to_thousand_with_three_in_them())
+def count_the_number_of_spaces_in_string(sentence: str) -> int:
+    return len([space for space in sentence if space == " "])
+
+
