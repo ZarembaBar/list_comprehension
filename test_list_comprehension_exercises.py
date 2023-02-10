@@ -1,6 +1,7 @@
 from list_comprehension_exercises import all_numbers_form_one_to_thousand_divisible_by_seven, \
     all_numbers_form_one_to_thousand_with_three_in_them, \
-    count_the_number_of_spaces_in_string
+    count_the_number_of_spaces_in_string, \
+    list_all_consonants_in_sentence
 
 
 def test_all_numbers_form_one_to_thousand_divisible_by_seven_happy_path():
@@ -64,3 +65,11 @@ def test_count_the_number_of_spaces_in_string__many_spaces_in_string():
     assert count_the_number_of_spaces_in_string(" B ARTEK") == 2
     assert count_the_number_of_spaces_in_string("B AR  TEK") == 3
     assert count_the_number_of_spaces_in_string("B A R  T E K ") == 7
+
+
+def test_list_all_consonants_in_sentence_happy_path():
+    sentence = "Yellow Yaks like yelling and yawning and yesturday they yodled while eating yuky yams"
+    assert list_all_consonants_in_sentence(sentence) == ['Y', 'l', 'l', 'w', 'Y', 'k', 's', 'l', 'k', 'y', 'l', 'l',
+                                                         'n', 'g', 'n', 'd', 'y', 'w', 'n', 'n', 'g', 'n', 'd', 'y',
+                                                         's', 't', 'r', 'd', 'y', 't', 'h', 'y', 'y', 'd', 'l', 'd',
+                                                         'w', 'h', 'l', 't', 'n', 'g', 'y', 'k', 'y', 'y', 'm', 's']
