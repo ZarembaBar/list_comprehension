@@ -1,5 +1,6 @@
 from list_comprehension_exercises import all_numbers_form_one_to_thousand_divisible_by_seven, \
-    all_numbers_form_one_to_thousand_with_three_in_them
+    all_numbers_form_one_to_thousand_with_three_in_them, \
+    count_the_number_of_spaces_in_string
 
 
 def test_all_numbers_form_one_to_thousand_divisible_by_seven_happy_path():
@@ -47,3 +48,19 @@ def test_all_numbers_form_one_to_thousand_with_three_in_them_happy_path():
                                                                      838, 839, 843, 853, 863, 873, 883, 893, 903, 913,
                                                                      923, 930, 931, 932, 933, 934, 935, 936, 937, 938,
                                                                      939, 943, 953, 963, 973, 983, 993]
+
+
+def test_count_the_number_of_spaces_in_string_no_space_in_string():
+    assert count_the_number_of_spaces_in_string("BARTEK") == 0
+
+
+def test_count_the_number_of_spaces_in_string_one_space_in_string():
+    assert count_the_number_of_spaces_in_string(" BARTEK") == 1
+    assert count_the_number_of_spaces_in_string("BAR TEK") == 1
+    assert count_the_number_of_spaces_in_string("BARTEK ") == 1
+
+
+def test_count_the_number_of_spaces_in_string__many_spaces_in_string():
+    assert count_the_number_of_spaces_in_string(" B ARTEK") == 2
+    assert count_the_number_of_spaces_in_string("B AR  TEK") == 3
+    assert count_the_number_of_spaces_in_string("B A R  T E K ") == 7
